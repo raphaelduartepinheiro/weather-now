@@ -1,0 +1,21 @@
+{
+  "name": "weather-now",
+  "homepage": "https://github.com/raphaklaus/weather-now",
+  "authors": [
+    "Raphael D. Pinheiro <raphaklaus@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "mojs": "~0.174.4"
+  }
+}
