@@ -1,7 +1,14 @@
 <html>
 <head>
   <!-- <link rel="stylesheet" type="text/css" href="lib/mojs/lib/mojs.js"> -->
-  <script src="lib/zeptojs/dist/zepto.min.js" type="text/javascript" charset="utf-8" async defer></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+
+  <!-- CSS Reset -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">  
+
+  <script src="lib/zeptojs/dist/zepto.min.gz" type="text/javascript" charset="utf-8" async defer></script>
+  <!-- <link rel="stylesheet" type="text/css" href="lib/milligram/dist/milligram.min.css"> -->
+
   <!-- <link rel="stylesheet" type="text/css" href="lib/zeptojs/dist/zepto.min.gz"> -->
   <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/mojs/latest/mo.min.js">
   <!-- // <script rel="stylesheet" type="javascript" href="src/movement.js"></script> -->
@@ -11,7 +18,11 @@
 </head>
 <body>
   <!-- <div class="square" id="js-square"></div> -->
-  <p>Previsão em Curitiba:</p>
-  <p class="forecast"></p>
+  <div class="box">
+    <input type="text" class="city" placeholder="Ex: New York" onkeypress="send(event)">
+    <small>Type the city and hit <b>enter</b></small>
+    
+    <p class="forecast"></p>
+  </div>
 </body>
 </html>
