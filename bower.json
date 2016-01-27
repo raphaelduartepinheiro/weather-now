@@ -16,6 +16,7 @@
     "tests"
   ],
   "dependencies": {
-    "mojs": "~0.174.4"
+    "mojs": "~0.174.4",
+    "zeptojs": "~1.1.6"
   }
 }
