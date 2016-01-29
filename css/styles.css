@@ -1,5 +1,6 @@
 body, html {
   padding: 0;
+  overflow: hidden;
 }
 
 body {
@@ -40,4 +41,78 @@ input{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.weather-box{
+  margin: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #aaa;
+  height: 75%;
+}
+
+.bottom{
+  align-self: flex-end;
+}
+
+.top{
+  align-self: flex-start;
+}
+
+.center{
+  align-self: center;
+}
+
+@keyframes goingLeft{
+  from{
+    left: 0;
+  }
+  to{
+    left: 85%;
+  }
+}
+
+@keyframes goingRight{
+  from{
+    left: 0;
+  }
+  to{
+    left: -75%;
+  }
+}
+
+.animation-left{
+  animation-name: goingLeft;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;  
+  animation-timing-function: ease-in-out;
+}
+
+.animation-right{
+  animation-name: goingRight;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;  
+  animation-timing-function: ease-in-out;
+}
+
+.animation-sun{
+  animation-name: goingRight;
+  animation-duration: 1200s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;  
+  animation-timing-function: ease-in-out;
+}
+
+.far-away{
+  font-size: 5vw;
+  margin: 0;
+  animation-duration: 40s;
+}
+
+.giant{
+  font-size: 12vw;
 }
