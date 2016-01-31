@@ -1,0 +1,82 @@
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot');
+    src: url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.woff') format('woff'),
+        url('../fonts/icomoon.ttf') format('truetype'),
+        url('../fonts/icomoon.svg?#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    font-size: 10vw;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /*margin: 0 5vw 0 5vw;*/
+    opacity: .6;
+    position: relative;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-sun-over-cloud:before {
+    content: "\f002";
+}
+.icon-sun:before {
+    content: "\f00d";
+}
+.icon-clouds:before {
+    content: "\f013";
+}
+.icon-thunder:before {
+    content: "\f016";
+}
+.icon-rain:before {
+    content: "\f01a";
+}
+.icon-drizzle:before {
+    content: "\f01b";
+}
+.icon-thunder-rain:before {
+    content: "\f01d";
+}
+.icon-heavy-thunder:before {
+    content: "\f01e";
+}
+.icon-celsius:before {
+    content: "\f03c";
+}
+.icon-cloud:before {
+    content: "\f041";
+}
+.icon-wind:before {
+    content: "\f050";
+}
+.icon-temperature:before {
+    content: "\f055";
+}
+.icon-snow:before {
+    content: "\f076";
+}
+.icon-humidity:before {
+    content: "\f07a";
+}
+.icon-sun-above-cloud:before {
+    content: "\f07d";
+}
+.icon-umbrella:before {
+    content: "\f084";
+}
+.icon-flag:before {
+    content: "\f0cc";
+}
+

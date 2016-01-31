@@ -1,6 +1,5 @@
 <html>
 <head>
-  <!-- <link rel="stylesheet" type="text/css" href="lib/mojs/lib/mojs.js"> -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300">
 
   <link rel="stylesheet" type="text/css" href="css/font-face.css">
@@ -8,15 +7,9 @@
   <!-- CSS Reset -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">  
 
-  <!-- // <script src="lib/movejs/index.js" type="text/javascript" charset="utf-8" defer></script> -->
-  <script src="lib/zeptojs/dist/zepto.min.gz" type="text/javascript" charset="utf-8" async defer></script>
-  <!-- <link rel="stylesheet" type="text/css" href="lib/milligram/dist/milligram.min.css"> -->
-
-  <!-- <link rel="stylesheet" type="text/css" href="lib/zeptojs/dist/zepto.min.gz"> -->
-  <!-- <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/mojs/latest/mo.min.js"> -->
-  <!-- // <script rel="stylesheet" type="javascript" href="src/movement.js"></script> -->
-  <script src="src/movement.js" type="text/javascript" charset="utf-8" defer></script>
   <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <script src="lib/zeptojs/dist/zepto.min.gz" type="text/javascript" charset="utf-8" async defer></script>
+  <script src="src/movement.js" type="text/javascript" charset="utf-8" defer></script>
   <title>Weather Now</title>
 </head>
 <body>
@@ -24,8 +17,7 @@
   <div class="box">
     <input type="text" class="city" placeholder="Ex: New York" onkeypress="send(event)">
     <small>Type the city and hit <b>enter</b></small>
-    <div class="weather-box">
-      <!-- <div class="meaning"> -->
+<!--     <div class="weather-box clear">
         <i class="icon-clouds animation-left bottom"></i>
         <i class="icon-cloud giant animation-right top"></i>
         <i class="icon-cloud animation-left top far-away"></i>
@@ -33,8 +25,18 @@
         <i class="icon-clouds animation-right center"></i>
         <i class="icon-cloud top center animation-left far-away"></i>
         <i class="icon-cloud center animation-left far-away"></i>
-      <!-- </div> -->
-    </div>
+    </div> -->
+        <i class="icon-thunder top animation-thunder super-heavy-wind giant-thunder"></i>
+    <div class="weather-box thunder">
+        <!-- <i class="icon-thunder top animation-thunder-2 far-away"></i> -->
+        <i class="icon-cloud animation-left far-away weak-wind bottom"></i>
+        <i class="icon-thunder-rain animation-left heavy-wind center"></i>
+        <i class="icon-rain giant animation-right weak-wind top"></i>
+        <br><br>
+        <i class="icon-clouds animation-right heavy-wind top"></i>
+        <!-- <i class="icon-thunder-rain animation-left top far-away"></i> -->
+        <!-- <i class="icon-sun-over-cloud animation-sun top"></i> -->
+    </div>    
     <p class="forecast"></p>
   </div>
 </body>
