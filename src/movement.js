@@ -11,6 +11,25 @@ function draw(weather){
 
 }
 
+function processMeaning(id){
+  if (id >= 200 && id <= 232)
+    return 'thunder'
+  else if (id >= 300 && id <= 321)
+    return 'drizzle'
+  else if (id >= 500 && id <= 531)
+    return 'rain'
+  else if (id >= 600 && id <= 622)
+    return 'snow'
+  else if (id >= 701 && id <= 781)
+    return 'atmosphere'
+  else if (id === 800)
+    return 'clear'
+  else if (id >= 900 && id <= 906)
+    return 'extreme'
+  else
+    return 'additional';
+}
+
 function send(event){
   if (event.keyCode === 13){
     var city = encodeURI($('.city').val());
