@@ -10,7 +10,7 @@ body {
   font-weight: 300;
   letter-spacing: 0.01em;
   line-height: 1.6;  
-  background: rgba(241, 226, 215, 0.2);
+  /*background: rgba(241, 226, 215, 0.2);*/
 }
 /*
 .square {
@@ -52,7 +52,7 @@ input{
   justify-content: space-between;
   /*align-items: center;*/
   color: #aaa;
-  height: 75%;
+  height: 70%;
 }
 
 .bottom{
@@ -92,17 +92,28 @@ input{
   3%{
     opacity: .6;
   }
-  6%{
+  5%{
     opacity: 0;
   }
-  9%{
+  7%{
     opacity: .6;
   }
-  12%{
+  9%{
     opacity: 0;
   }
 }
-/*
+
+@keyframes fallingRain{
+  from{
+    top: 0;
+    left: 0;
+  }
+  to{
+    top: 100%;
+    left: 100%;
+  }
+}
+
 .animation-left{
   animation-name: goingLeft;
   animation-iteration-count: infinite;
@@ -127,26 +138,32 @@ input{
 
 .animation-thunder{
   animation-name: flashingThunder;
+  animation-duration: 10s;
   animation-delay: 2s;
   animation-iteration-count: infinite;
 }
 
-.animation-thunder-2{
-  animation-name: flashingThunder;
-  animation-delay: 1s;
+.animation-rain{
+  animation-name: fallingRain;
+  /*animation-delay: 1s;*/
+  animation-duration: 1s;
+  animation-timing-function: linear;
   animation-iteration-count: infinite;
+  
+  font-size: 40px;
+  position: absolute;
 }
-*/
-.weak-wind{
-  animation-duration: 27s;
+
+.thin-wind{
+  animation-duration: 37s;
 }
 
 .heavy-wind{
-  animation-duration: 13s;
+  animation-duration: 27s;
 }
 
 .super-heavy-wind{
- animation-duration: 7s; 
+ animation-duration: 17s; 
 }
 
 .icon-thunder{
@@ -155,10 +172,24 @@ input{
 
 .giant-thunder{
   /*opacity: 0;*/
-  font-size: 75vw;
+  font-size: 90vw;
   position: absolute;
-  left: 25vw;
+  left: 20vw;
+  /*top: 1vh;*/
+  z-index: -1;
 }
+
+@media (min-width: 640px){
+  .giant-thunder{
+    /*opacity: 0;*/
+    font-size: 45vw;
+    position: absolute;
+    left: 35vw;
+    /*top: 1vh;*/
+    /*z-index: -1;*/
+  }  
+}
+
 
 .far-away{
   font-size: 5vw;
@@ -168,4 +199,12 @@ input{
 
 .giant{
   font-size: 12vw;
+}
+
+.dark-sky{
+  background-color: #272727;
+}
+
+.light-sky{
+  background: rgba(241, 226, 215, 0.2);
 }
