@@ -114,6 +114,40 @@ input{
   }
 }
 
+@keyframes pulsingSun{
+    0%{
+      transform: scale(1);
+    }
+    100%{
+      transform: scale(1.75);
+    }
+}
+
+@keyframes rotatingSun{
+/*  from{
+    transform: rotate(0deg);
+  }*/
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+.animation-rotating{
+  animation-name: rotatingSun;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  /*animation-direction: alternate;*/
+  animation-timing-function: linear;
+}
+
+.animation-sun-pulse{
+  animation-name: pulsingSun;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in;
+}
+
 .animation-left{
   animation-name: goingLeft;
   animation-iteration-count: infinite;
@@ -207,4 +241,9 @@ input{
 
 .light-sky{
   background: rgba(241, 226, 215, 0.2);
+}
+
+.hmargin{
+  margin-bottom: 100px;
+  /*margin-top: 100px;*/
 }
