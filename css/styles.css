@@ -51,7 +51,9 @@ input{
   flex-wrap: wrap;
   justify-content: space-between;
   /*align-items: center;*/
-  color: #aaa;
+  /*color: #aaa;*/
+  /*color: #BFBFBF;*/
+  color: #EFEFEF;
   height: 70%;
 }
 
@@ -72,7 +74,7 @@ input{
     left: 0;
   }
   to{
-    left: -60%;
+    left: -70%;
   }
 }
 
@@ -81,7 +83,7 @@ input{
     left: 0;
   }
   to{
-    left: 60%;
+    left: 70%;
   }
 }
 
@@ -152,14 +154,14 @@ input{
   animation-name: goingLeft;
   animation-iteration-count: infinite;
   animation-direction: alternate;  
-  animation-timing-function: ease-in-out;
+  animation-timing-function: cubic-bezier(0.250, 0.460, 0.450, 0.940);
 }
 
 .animation-right{
   animation-name: goingRight;
   animation-iteration-count: infinite;
   animation-direction: alternate;  
-  animation-timing-function: ease-in-out;
+  animation-timing-function: cubic-bezier(0.250, 0.460, 0.450, 0.940);
 }
 
 .animation-sun{
@@ -189,11 +191,11 @@ input{
 }
 
 .thin-wind{
-  animation-duration: 37s;
+  animation-duration: 90s;
 }
 
 .heavy-wind{
-  animation-duration: 27s;
+  animation-duration: 47s;
 }
 
 .super-heavy-wind{
@@ -224,6 +226,10 @@ input{
   }  
 }
 
+.sun{
+  z-index: -2;
+  color: #EFDD83
+}
 
 .far-away{
   font-size: 5vw;
@@ -232,7 +238,8 @@ input{
 }
 
 .giant{
-  font-size: 12vw;
+  /*font-size: 12vw;*/
+  transform: scale(2);
 }
 
 .dark-sky{
@@ -240,10 +247,16 @@ input{
 }
 
 .light-sky{
-  background: rgba(241, 226, 215, 0.2);
+  /*background: rgba(241, 226, 215, 0.2);*/
+  background-color: rgb(143, 196, 234);
 }
 
 .hmargin{
   margin-bottom: 100px;
   /*margin-top: 100px;*/
+}
+
+.transparent{
+  opacity: .6;
+  z-index: 2;
 }
