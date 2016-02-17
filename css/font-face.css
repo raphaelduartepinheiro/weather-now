@@ -12,7 +12,7 @@
 [class^="icon-"], [class*=" icon-"] {
     /* use !important to prevent issues with browser extensions that change fonts */
     font-family: 'icomoon' !important;
-    font-size: 10vw;
+    font-size: 14vw;
     speak: none;
     font-style: normal;
     font-weight: normal;
@@ -20,7 +20,7 @@
     text-transform: none;
     line-height: 1;
     /*margin: 0 5vw 0 5vw;*/
-    opacity: .6;
+    /*opacity: .6;*/
     position: relative;
 
     /* Better Font Rendering =========== */
@@ -28,6 +28,40 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-opac-sun:before {
+    content: "\e90a";
+}
+
+.icon-opac-clouds:before {
+    content: "\e903";
+}
+.icon-opac-lightning:before {
+    content: "\e904";
+}
+.icon-opac-snow:before {
+    content: "\e905";
+}
+.icon-opac-rain:before {
+    content: "\e906";
+}
+.icon-opac-cloud:before {
+    content: "\e907";
+}
+.icon-opac-raindrop:before {
+    content: "\e908";
+}
+.icon-raindrop:before {
+    content: "\e909";
+}
+.icon-cloud-fog:before {
+    content: "\e900";
+}
+.icon-opac-cloud2:before {
+    content: "\e901";
+}
+.icon-opac-cloud3:before {
+    content: "\e902";
+}
 .icon-sun-over-cloud:before {
     content: "\f002";
 }
@@ -40,7 +74,7 @@
 .icon-thunder:before {
     content: "\f016";
 }
-.icon-rain:before {
+.icon-rain2:before {
     content: "\f01a";
 }
 .icon-drizzle:before {
@@ -55,7 +89,7 @@
 .icon-celsius:before {
     content: "\f03c";
 }
-.icon-cloud:before {
+.icon-cloud4:before {
     content: "\f041";
 }
 .icon-wind:before {
@@ -64,11 +98,8 @@
 .icon-temperature:before {
     content: "\f055";
 }
-.icon-snow:before {
+.icon-snow2:before {
     content: "\f076";
-}
-.icon-humidity:before {
-    content: "\f07a";
 }
 .icon-sun-above-cloud:before {
     content: "\f07d";
