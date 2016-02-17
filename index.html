@@ -12,14 +12,14 @@
   <script src="src/movement.js" type="text/javascript" charset="utf-8" defer></script>
   <title>Weather Now</title>
 </head>
-<body class="light-sky">
+<body class="dark-sky">
   <!-- <div class="square" id="js-square"></div> -->
   <div class="box">
-    <input type="text" class="city" placeholder="Ex: New York" onkeypress="send(event)">
-    <small>Type the city and hit <b>enter</b></small>
-    <div class="weather-box clear">
-        <i class="icon-opac-cloud center animation-right thin-wind 100margin far-away"></i>
-        <i class="icon-opac-cloud2 giant animation-right heavy-wind center transparent"></i>
+    <input type="text" class="dark city" placeholder="Ex: New York" onkeypress="send(event)" autofocus>
+    <small class="darker">Type the city and hit <b>enter</b></small>
+<!--     <div class="weather-box clear">
+        <i class="icon-opac-cloud center animation-right super-heavy-wind 100margin far-away"></i>
+        <i class="icon-opac-cloud2 giant animation-right thin-wind center transparent"></i>
         <i class="icon-opac-clouds animation-right thin-wind top transparent"></i>
         <div class="animation-rotating top sun">
           <i class="icon-opac-sun"></i>
@@ -28,19 +28,35 @@
         <i class="icon-opac-cloud center animation-left hmargin thin-wind far-away"></i>        
         <i class="icon-opac-clouds animation-left heavy-wind bottom transparent"></i>
         <i class="icon-opac-cloud animation-left bottom thin-wind far-away"></i>
+    </div> -->
+
+    <div class="sky-repeater animate-clouds">
+      <i class="icon-thunder top animation-thunder giant-thunder"></i>
+      <div class="weather-box thunder">
+          <!-- Chuva grande scale(2), raio maior scale(3) -->
+          <i class="icon-opac-cloud2 animation-right far-away transparent thin-wind top"></i>
+          <!-- <i class="icon-opac-cloud animation-left super-giant center transparent"></i>         -->
+          <i class="icon-opac-cloud3 animation-right giant heavy-wind transparent bottom"></i>
+          <i class="icon-opac-cloud2 giant animation-right super-heavy-wind center "></i>
+          <i class="icon-opac-cloud animation-left thin-wind far-away transparent bottom hmargin"></i>
+          <i class="icon-opac-cloud animation-left heavy-away heavy-wind top transparent"></i>
+          <i class="icon-opac-cloud animation-left far-away transparent thin-wind top"></i>
+          <i class="icon--opac-cloud animation-right far-away heavy-wind center"></i>
+      </div>
+      <div class="weather-box thunder">
+          <!-- Chuva grande scale(2), raio maior scale(3) -->
+          <i class="icon-opac-cloud2 animation-right far-away transparent thin-wind top"></i>
+          <!-- <i class="icon-opac-cloud animation-left super-giant center transparent"></i>         -->
+          <i class="icon-opac-cloud3 animation-right giant heavy-wind transparent bottom"></i>
+          <i class="icon-opac-cloud2 giant animation-right super-heavy-wind center "></i>
+          <i class="icon-opac-cloud animation-left thin-wind far-away transparent bottom hmargin"></i>
+          <i class="icon-opac-cloud animation-left heavy-away heavy-wind top transparent"></i>
+          <i class="icon-opac-cloud animation-left far-away transparent thin-wind top"></i>
+          <i class="icon--opac-cloud animation-right far-away heavy-wind center"></i>
+      </div>    
+      
     </div>
 
-<!--     <i class="icon-thunder top animation-thunder giant-thunder"></i>
-    <div class="weather-box thunder">
-        Chuva grande scale(2), raio maior scale(3)
-        <i class="icon-cloud animation-right far-away thin-wind bottom"></i>
-        <i class="icon-thunder-rain animation-right heavy-wind center"></i>
-        <i class="icon-cloud animation-left far-away thin-wind top"></i>
-        <i class="icon-rain giant animation-right super-heavy-wind top"></i>
-        <br><br>
-        <i class="icon-clouds animation-right thin-wind bottom"></i>
-        <i class="icon-cloud animation-right far-away heavy-wind center"></i>
-    </div>  -->   
 <!--         <span class="animation-rain">|</span>
         <span class="animation-rain">|</span>
         <span class="animation-rain">|</span>
