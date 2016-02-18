@@ -18,46 +18,61 @@
     <input type="text" class="dark city" placeholder="Ex: New York" onkeypress="send(event)" autofocus>
     <small class="darker">Type the city and hit <b>enter</b></small>
 <!--     <div class="weather-box clear">
-        <i class="icon-opac-cloud center animation-right super-heavy-wind 100margin far-away"></i>
-        <i class="icon-opac-cloud2 giant animation-right thin-wind center transparent"></i>
-        <i class="icon-opac-clouds animation-right thin-wind top transparent"></i>
+        <i class="icon-opac-cloud center  super- 100margin far-away"></i>
+        <i class="icon-opac-cloud2 giant  thin-wind center transparent"></i>
+        <i class="icon-opac-clouds  thin-wind top transparent"></i>
         <div class="animation-rotating top sun">
           <i class="icon-opac-sun"></i>
         </div>
-        <i class="icon-opac-cloud top animation-left hmargin heavy-wind far-away transparent"></i>
-        <i class="icon-opac-cloud center animation-left hmargin thin-wind far-away"></i>        
-        <i class="icon-opac-clouds animation-left heavy-wind bottom transparent"></i>
-        <i class="icon-opac-cloud animation-left bottom thin-wind far-away"></i>
+        <i class="icon-opac-cloud top  hmargin  far-away transparent"></i>
+        <i class="icon-opac-cloud center  hmargin thin-wind far-away"></i>        
+        <i class="icon-opac-clouds   bottom transparent"></i>
+        <i class="icon-opac-cloud  bottom thin-wind far-away"></i>
     </div> -->
 
     <div class="sky-repeater animate-clouds-distance absolute">
       <div class="weather-box">
         <i class="icon-opac-cloud2 far-away top"></i>      
-        <i class="icon-opac-cloud far-away center"></i>
-        <i class="icon--opac-cloud far-away heavy-wind center"></i>
+        <i class="icon-opac-cloud far-away center hmargin"></i>
+        <i class="icon--opac-cloud far-away  center"></i>
         <i class="icon-opac-cloud far-away bottom"></i>      
       </div>
       <div class="weather-box">
         <i class="icon-opac-cloud2 far-away top"></i>      
-        <i class="icon-opac-cloud far-away center"></i>
-        <i class="icon--opac-cloud far-away heavy-wind center"></i>
+        <i class="icon-opac-cloud far-away center hmargin"></i>
+        <i class="icon--opac-cloud far-away  center"></i>
         <i class="icon-opac-cloud far-away bottom"></i>      
       </div>      
     </div>
 
-    <i class="icon-thunder top animation-thunder giant-thunder"></i>
+    <div class="thunder-box">
+      <i class="icon-thunder top animation-thunder giant-thunder hmargin"></i>
+      <i class="icon-thunder top animation-thunder giant-thunder-2 hmargin"></i>
+    </div>
+
     <div class="sky-repeater animate-clouds">
       <div class="weather-box">
-          <i class="icon-opac-cloud3 animation-right giant heavy-wind transparent bottom"></i>
-          <i class="icon-opac-cloud2 giant animation-right super-heavy-wind center "></i>
-          <i class="icon-opac-cloud animation-left heavy-away heavy-wind top transparent"></i>
-          
+          <div class="bounceable bottom giant">
+            <div class="icon-opac-cloud3 transparent "></div>
+          </div>
+          <div class="bounceable center giant">
+            <div class="icon-opac-cloud2"></div>
+          </div>
+          <div class="bounceable top">
+            <div class="icon-opac-cloud transparent"></div>
+          </div>
       </div>
       <div class="weather-box">
-          <i class="icon-opac-cloud3 animation-right giant heavy-wind transparent bottom"></i>
-          <i class="icon-opac-cloud2 giant animation-right super-heavy-wind center "></i>
-          <i class="icon-opac-cloud animation-left heavy-away heavy-wind top transparent"></i>
-      </div>    
+          <div class="bounceable bottom giant">
+            <div class="icon-opac-cloud3 transparent "></div>
+          </div>
+          <div class="bounceable center giant">
+            <div class="icon-opac-cloud2"></div>
+          </div>
+          <div class="bounceable top">
+            <div class="icon-opac-cloud transparent"></div>
+          </div>
+      </div>  
     </div>
 
 <!--         <span class="animation-rain">|</span>
@@ -65,9 +80,9 @@
         <span class="animation-rain">|</span>
         <span class="animation-rain">|</span> -->
 <!--     <div class="weather-box drizzle">
-        <i class="icon-thunder-rain animation-right heavy-wind center"></i>
-        <i class="icon-cloud animation-left far-away thin-wind top"></i>
-        <i class="icon-rain giant animation-right super-heavy-wind top"></i>
+        <i class="icon-thunder-rain   center"></i>
+        <i class="icon-cloud  far-away thin-wind top"></i>
+        <i class="icon-rain giant  super- top"></i>
     </div> -->
     <p class="forecast"></p>
   </div>
