@@ -1,57 +1,104 @@
 <html>
 <head>
   <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300"> -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="css/font-face.css">
 
   <!-- CSS Reset -->
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">   -->
+  <link rel="stylesheet" type="text/css" href="">
 
-  <link rel="stylesheet" type="text/css" href="css/styles.css">
-  <script src="lib/zeptojs/dist/zepto.min.gz" type="text/javascript" charset="utf-8" async defer></script>
+  <link rel="stylesheet" type="text/css" href="css/build/styles.css">
+  <script src="./lib/zeptojs/dist/zepto.min.js" type="text/javascript" charset="utf-8" async defer></script>
   <script src="src/movement.js" type="text/javascript" charset="utf-8" defer></script>
   <title>Weather Now</title>
 </head>
-<body class="dark-sky">
+<body class="light-sky dark-background">
   <!-- <div class="square" id="js-square"></div> -->
+  <div class="loading-scene-1 light-border"></div>
+  <div class="loading-scene-2 dark-border"></div>
+  
   <div class="box">
-    <input type="text" class="dark city" placeholder="Ex: New York" onkeypress="send(event)" autofocus>
-    <small class="darker">Type the city and hit <b>enter</b></small>
-<!--     <div class="weather-box clear">
-        <i class="icon-opac-cloud center  super- 100margin far-away"></i>
-        <i class="icon-opac-cloud2 giant  thin-wind center transparent"></i>
-        <i class="icon-opac-clouds  thin-wind top transparent"></i>
-        <div class="animation-rotating top sun">
-          <i class="icon-opac-sun"></i>
+    <div class="invisible">
+      <input type="text" class="light city" placeholder="Ex: New York" onkeypress="send(event)" autofocus>
+      <small class="lighter">Type the city and hit <b>enter</b></small>
+    </div>
+    <!-- <div class="weather-box clear"> -->
+    <div>
+      <div class="weather-box absolute hidden-scene-delay-1">
+        <div class="animation-rotating top">
+          <div class="icon-opac-sun"></div>
+        </div>   
+      </div>
+      <div class="sky-repeater animate-clouds-distance absolute thin-wind">
+        <div class="weather-box zoom-out">
+          <i class="icon-opac-cloud2 far-away top"></i>      
+          <i class="icon-opac-cloud2 far-away top light-transparent"></i>      
+          <i class="icon-opac-cloud far-away center hmargin"></i>
+          <i class="icon-opac-cloud far-away center hmargin"></i>
+          <i class="icon-opac-cloud far-away bottom"></i>      
         </div>
-        <i class="icon-opac-cloud top  hmargin  far-away transparent"></i>
-        <i class="icon-opac-cloud center  hmargin thin-wind far-away"></i>        
-        <i class="icon-opac-clouds   bottom transparent"></i>
-        <i class="icon-opac-cloud  bottom thin-wind far-away"></i>
-    </div> -->
+        <div class="weather-box zoom-out">
+          <i class="icon-opac-cloud2 far-away top"></i>      
+          <i class="icon-opac-cloud2 far-away top light-transparent"></i>      
+          <i class="icon-opac-cloud far-away center hmargin"></i>
+          <i class="icon-opac-cloud far-away center hmargin"></i>
+          <i class="icon-opac-cloud far-away bottom"></i>      
+        </div>
+      </div>
 
+      <div class="sky-repeater animate-clouds super-heavy-wind">
+        <div class="weather-box hidden-scene-delay-2">
+          <div class="bounceable bottom">
+            <div class="icon-opac-cloud bottom 100margin"></div>
+          </div>
+          <div class="bounceable center giant">
+            <div class="icon-opac-cloud2 light-transparent"></div>
+          </div>          
+          <div class="bounceable top">
+            <div class="icon-opac-clouds light-transparent"></div>
+          </div>
+        </div>
+        <div class="weather-box hidden-scene-delay-2">
+          <div class="bounceable bottom">
+            <div class="icon-opac-cloud bottom 100margin"></div>
+          </div>
+          <div class="bounceable center giant">
+            <div class="icon-opac-cloud2 light-transparent"></div>
+          </div>          
+          <div class="bounceable top">
+            <div class="icon-opac-clouds light-transparent"></div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+
+
+    <!-- </div> -->
+
+    <!-- Raining weather -->
     <div class="sky-repeater animate-clouds-distance absolute">
-      <div class="weather-box">
+      <div class="weather-box display-scene-delay-1">
         <i class="icon-opac-cloud2 far-away top"></i>      
         <i class="icon-opac-cloud far-away center hmargin"></i>
-        <i class="icon--opac-cloud far-away  center"></i>
         <i class="icon-opac-cloud far-away bottom"></i>      
       </div>
-      <div class="weather-box">
+      <div class="weather-box display-scene-delay-1">
         <i class="icon-opac-cloud2 far-away top"></i>      
         <i class="icon-opac-cloud far-away center hmargin"></i>
-        <i class="icon--opac-cloud far-away  center"></i>
         <i class="icon-opac-cloud far-away bottom"></i>      
       </div>      
     </div>
 
-    <div class="thunder-box">
-      <i class="icon-thunder top animation-thunder giant-thunder hmargin"></i>
-      <i class="icon-thunder top animation-thunder giant-thunder-2 hmargin"></i>
+    <div class="thunder-box display-thunder">
+      <i class="icon-thunder top animation-thunder giant-thunder"></i>
+      <i class="icon-thunder top animation-thunder giant-thunder-2"></i>
     </div>
 
     <div class="sky-repeater animate-clouds">
-      <div class="weather-box">
+      <div class="weather-box display-scene-delay-2">
           <div class="bounceable bottom giant">
             <div class="icon-opac-cloud3 transparent "></div>
           </div>
@@ -62,7 +109,7 @@
             <div class="icon-opac-cloud transparent"></div>
           </div>
       </div>
-      <div class="weather-box">
+      <div class="weather-box display-scene-delay-2">
           <div class="bounceable bottom giant">
             <div class="icon-opac-cloud3 transparent "></div>
           </div>
