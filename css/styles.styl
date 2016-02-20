@@ -1,0 +1,389 @@
+$flashing-color = #272727
+$flashing-soft-color = gray
+$light-sky-font-color = #196492
+$light-sky-soft-font-color = #3E8EBF
+$dark-sky-font-color = #bbb
+$dark-sky-soft-font-color = #ccc
+$cloud-color = #EFEFEF
+$sun-color = #EFDD83
+$light-sky = #8FC4EA
+$dark-sky = #272727
+$transparent-cloud-color = #ccc // DRY!
+$transparent-cloud-soft-color = #eee
+$transparent-input-color = rgba(0, 0, 0, 0)
+$transparent-input-border-color = #BCE4FB
+
+body
+html
+  overflow: hidden
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif
+  font-weight: 300
+  line-height: 1.6
+  margin: 0
+  padding: 0
+  
+p
+  letter-spacing: .1em
+
+input
+  font: inherit
+
+@keyframes flashingSky
+  0%
+    background-color: $flashing-soft-color
+    opacity: 1
+
+  6%
+    background-color: $flashing-color
+    opacity: 0
+
+  7%
+    background-color: $flashing-soft-color
+    opacity: 1
+
+  11%
+    background-color: $flashing-color
+    opacity: 0
+
+  12%
+    background-color: $flashing-soft-color
+    opacity: 1
+
+  20%
+    background-color: $flashing-color
+    opacity: 1
+
+  26%
+    background-color: $flashing-color
+    opacity: 0
+
+  27%
+    background-color: $flashing-soft-color
+    opacity: 1
+
+  31%
+    background-color: $flashing-color
+    opacity: 0
+
+  32%
+    background-color: $flashing-soft-color
+    opacity: 1
+
+  40%
+    background-color: $flashing-color
+    opacity: 1
+
+
+.animate-flashing-skies
+  animation-delay: 2s
+  animation-duration: 10s
+  animation-iteration-count: infinite
+  animation-name: flashingSky
+
+.sky-repeater
+  display: flex
+  flex-direction: row
+  position: absolute;
+  left: 0
+  height: 70%
+  width: 100%
+
+input
+  background-color: $transparent-input-color
+  border: 0
+  font-size: 1.5em
+  margin: 2em .5em .5em 0
+  outline: 0
+  padding: 0
+  text-align: center
+  width: 350px
+
+.light-input
+  border-bottom: 1px solid $transparent-input-border-color
+
+.light::placeholder
+  color: $light-sky-font-color
+
+.lighter
+  color: $light-sky-soft-font-color
+
+.dark::placeholder
+  color: $dark-sky-font-color
+
+.darker
+  color: $dark-sky-soft-font-color
+
+.box
+  align-items: center
+  display: flex
+  flex-direction: column
+  justify-content: center
+
+.weather-box
+  color: $cloud-color
+  display: flex
+  flex-shrink: 0
+  flex-wrap: wrap
+  justify-content: space-around
+  width: 100%
+
+.bottom
+  align-self: flex-end
+
+.top
+  align-self: flex-start
+
+.center
+  align-self: center
+
+@keyframes movingSuperGiant
+  100%
+    transform: translateX(-300px)
+
+@keyframes goingLeft
+  from
+    transform: translateX(0)
+  to
+    transform: translateX(-100%)
+
+@keyframes goingRight
+  from
+    left: 0
+  to
+    left: 70%
+
+@keyframes flashingThunder
+  3%
+    opacity: .6
+  5%
+    opacity: 0
+  7%
+    opacity: .6
+  9%
+    opacity: 0
+
+@keyframes fallingRain
+  from
+    left: 0
+    top: 0
+  to
+    left: 100%
+    top: 100%
+
+@keyframes pulsingSun
+  to
+    transform: scale(1.75)
+
+@keyframes rotatingSun
+  to
+    transform: rotate(360deg)
+
+.animate-clouds
+  animation-duration: 5s
+  animation-iteration-count: infinite
+  animation-name: goingLeft
+  animation-timing-function: linear
+
+.animate-clouds-distance
+  animation-duration: 25s
+  animation-iteration-count: infinite
+  animation-name: goingLeft
+  animation-timing-function: linear
+  position: absolute
+
+.animation-thunder
+  animation-delay: 2s
+  animation-duration: 10s
+  animation-iteration-count: infinite
+  animation-name: flashingThunder
+
+.thin-wind
+  animation-duration: 25s
+
+.heavy-wind
+  animation-duration: 15s
+
+.super-heavy-wind
+ animation-duration: 10s
+
+.icon-thunder
+  opacity: 0
+
+.thunder-box
+  color: #606c76
+  display: flex
+  height: 40vh
+  justify-content: space-around
+  position: absolute
+  top: 0
+  width: 100%
+
+.giant-thunder
+  margin-top: 5vw
+  transform: scale(4)
+  z-index: -1
+
+.giant-thunder-2
+  animation-delay: 4s
+  margin-top: 5vw
+  transform: scale(4)
+  z-index: -1
+
+.icon-opac-sun
+  color: $sun-color
+  font-size: 24vw
+  z-index: -2
+
+.far-away
+  margin: 0
+  transform: scale(.6)
+
+.giant
+  transform: scale(2)
+
+.super-giant
+  -webkit-filter: blur(1px)
+  animation-duration: 300s
+  animation-name: movingSuperGiant
+  animation-timing-function: linear
+  left: 0
+  position: absolute
+  top: 10%
+  z-index: 4
+  zoom: 10
+
+.dark-sky
+  background-color: $dark-sky
+
+.light-sky
+  background-color: $light-sky
+
+.hmargin
+  margin-bottom: 100px
+
+.transparent
+  color: $transparent-cloud-color
+  opacity: .6
+
+.light-transparent
+  color: $transparent-cloud-soft-color
+  opacity: .4
+
+.absolute
+  position: absolute
+  left: 0
+
+@keyframes boucingCloud
+  0%, 20%, 50%, 80%, 100%
+    transform: translateY(0)
+  40%
+    transform: translateY(-4px)
+  60%
+    transform: translateY(-2px)
+
+.bounceable:hover > div
+  animation-duration: .5s
+  animation-name: boucingCloud
+  animation-timing-function: ease
+
+.animation-rotating
+  // transform-origin: center center
+  animation-duration: 10s
+  animation-iteration-count: infinite
+  animation-name: rotatingSun
+  animation-timing-function: linear
+  
+.invisible
+  visibility: hidden
+
+@keyframes hidingScene
+  100%
+    transform: translateY(1000px)
+
+@keyframes showingScene
+  0%
+    transform: translateY(1000px)
+  100%
+    transform: translateY(0px)
+
+@keyframes zoomOut
+  100%
+    opacity: 0
+    
+@keyframes thunderAppear
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+    
+@keyframes darkenBackground
+  100%
+    background-color: $dark-sky
+
+// create a mixin for this
+
+.display-thunder{
+  animation-name: thunderAppear
+  animation-duration: 3s
+  animation-delay: 8s
+  animation-fill-mode: backwards  
+}
+
+.dark-background
+  animation-name: darkenBackground
+  animation-duration: 1.5s
+  animation-delay: 8s
+  animation-iteration-count: 1
+  animation-fill-mode: forwards
+
+.zoom-out
+  animation-name: zoomOut
+  animation-duration: 1s
+  animation-delay: 7s
+  animation-fill-mode: forwards
+
+for num in (1..2)
+  .hidden-scene-delay-{num}
+    animation-name: hidingScene
+    animation-duration: 2.75s
+    animation-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550)
+    animation-delay: (4 + num)s
+    animation-iteration-count: 1
+    animation-fill-mode: forwards
+  
+for num in (1..2)
+  .display-scene-delay-{num}
+    animation-name: showingScene
+    animation-duration: 2.75s
+    animation-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550)
+    animation-delay: (6 + num)s
+    animation-iteration-count: 1
+    animation-fill-mode: backwards
+
+@keyframes loading
+  0%
+    width: 0
+  100%
+    width: 100%
+    visibility: hidden
+
+for num in (1..4)
+  .loading-scene-{num}
+    animation-name: loading
+    animation-duration: 10s
+    animation-delay: ((num - 1) * 10)s
+    animation-timing-function: ease
+    animation-iteration-count: 1
+    border-radius: 1px
+    height: 2px
+    position: absolute
+    top: 0
+    left: 0
+
+.light-border
+  background-color: $light-sky-soft-font-color
+  border-bottom: 1px solid $light-sky-font-color
+
+.dark-border
+  background-color: $dark-sky-soft-font-color
+  border-bottom: 1px solid $dark-sky-font-color
