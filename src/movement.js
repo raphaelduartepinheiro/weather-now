@@ -48,3 +48,15 @@ function send(event){
   }
 }
 
+$(function(){
+
+  console.log('vivo');
+
+  // $('.loading').one('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e){
+  //   $(this).removeClass('loading');
+  //   $(this).addClass('red');
+  //   $('.red').addClass('loading');
+  //   console.log('acabou');
+  // });
+  
+})
